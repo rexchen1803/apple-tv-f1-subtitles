@@ -19,5 +19,5 @@ script-providers:
     url: https://github.com/DualSubs/Universal/releases/download/v1.7.5/Manifest.response.bundle.js
     interval: 86400
   apple-tv-f1-chinese:
-    url: https://raw.githubusercontent.com/rexchen2024/f1-apple-tv-subtitles/main/payloads/2026-f1-race-commentary-zh.js
+    url: https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/payloads/2026-f1-race-commentary-zh.js
     interval: 86400

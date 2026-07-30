@@ -6,4 +6,4 @@ hostname = hls-amt.itunes.apple.com
 
 [Script]
 f1-subtitle-manifest = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/.+\/.+_subtitles_V\d+\.m3u8,requires-body=1,script-path=https://github.com/DualSubs/Universal/releases/download/v1.7.5/Manifest.response.bundle.js
-apple-tv-f1-chinese = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/(?:[^\/]+\/)+(?:P1436852938_A1881739464|P1429344944_A1882150267)_en_subtitles_V2-\d+\.webvtt(?:\?.*)?$,requires-body=1,script-path=https://raw.githubusercontent.com/rexchen2024/f1-apple-tv-subtitles/main/payloads/2026-f1-race-commentary-zh.js
+apple-tv-f1-chinese = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/(?:[^\/]+\/)+(?:P1436852938_A1881739464|P1429344944_A1882150267)_en_subtitles_V2-\d+\.webvtt(?:\?.*)?$,requires-body=1,script-path=https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/payloads/2026-f1-race-commentary-zh.js
