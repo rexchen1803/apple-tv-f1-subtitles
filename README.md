@@ -14,11 +14,13 @@
 
 ## 使用方法
 
-> 使用前，请先在 Surge 中开启 **MITM**，并安装、信任根证书。
+> 使用前，请先在 Surge、Stash 或 Shadowrocket 中开启 **MITM**，并安装、信任根证书。
 
 | 工具 | 添加位置 | 模块地址 |
 | --- | --- | --- |
 | Surge | 模块 | [https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/surge/f1-2026-race-commentary-zh.sgmodule](https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/surge/f1-2026-race-commentary-zh.sgmodule) |
+| Stash | 覆写 | [https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/stash/f1-2026-race-commentary-zh.stoverride](https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/stash/f1-2026-race-commentary-zh.stoverride) |
+| Shadowrocket | 模块 | [https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/shadowrocket/f1-2026-race-commentary-zh.module](https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/shadowrocket/f1-2026-race-commentary-zh.module) |
 
 打开支持场次的比赛回放，在字幕中选择英文解说对应的字幕轨即可。
 
