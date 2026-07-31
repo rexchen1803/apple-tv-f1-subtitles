@@ -1,9 +1,9 @@
 #!name=Apple TV F1 中文字幕（Public Beta）
-#!desc=已翻译 2026 奥地利站、英国站全场比赛解说（不含赛前、赛后采访）
+#!desc=2026.07.31.1：已支持 2026 赛季前 10 站正赛回放中文解说字幕
 
 [MITM]
-hostname = hls-amt.itunes.apple.com
+hostname = %APPEND% hls-amt.itunes.apple.com
 
 [Script]
 f1-subtitle-manifest = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/.+\/.+_subtitles_V\d+\.m3u8,requires-body=1,script-path=https://github.com/DualSubs/Universal/releases/download/v1.7.5/Manifest.response.bundle.js
-apple-tv-f1-chinese = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/(?:[^\/]+\/)+(?:P1436852938_A1881739464|P1429344944_A1882150267)_en_subtitles_V2-\d+\.webvtt(?:\?.*)?$,requires-body=1,script-path=https://raw.githubusercontent.com/rexchen1803/f1-apple-tv-subtitles/main/payloads/2026-f1-race-commentary-zh.js
+apple-tv-f1-chinese = type=http-response,pattern=^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/(?:[^\/]+\/)+(?:P1337486392_A1881724926|P1337522687_A1881777941|P1326620577_A1881763666|P1364568578_A1881733891|P1392837560_A1881753363|P1411825097_A1881742204|P1413846083_A1881690171|P1429344944_A1882150267|P1436852938_A1881739464|P1457248952_A1881786635)_en_subtitles_V2-\d+\.webvtt(?:\?.*)?$,requires-body=1,script-path=https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/2026-f1-race-commentary-zh.js
