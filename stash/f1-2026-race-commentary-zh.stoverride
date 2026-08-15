@@ -28,54 +28,80 @@ http:
       name: movie-the-martian-manifest
       type: response
       require-body: true
-    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?(?=[^#]*mainAssetAdamId=6799243858)(?=[^#]*martianzh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?[^#]*mainAssetAdamId=6799243858[^#]*martianzh=1[^#]*$'
       name: movie-the-martian-playlist
       type: response
       require-body: true
-    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1468742269_A6799243858_en_subtitles_V\d+-\.webvtt\?(?=[^#]*martianzh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1468742269_A6799243858_en_subtitles_V\d+-\.webvtt\?[^#]*martianzh=1[^#]*$'
       name: movie-the-martian-vtt
       type: response
       require-body: true
+      timeout: 30
+      max-size: 2097152
     - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/playlist\.m3u8\?(?:.*&)?a=6793326577(?:&.*)?$'
       name: movie-mi4-manifest
       type: response
       require-body: true
-    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?(?=[^#]*mainAssetAdamId=6793326577)(?=[^#]*mi4zhadd=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?[^#]*mainAssetAdamId=6793326577[^#]*mi4zhadd=1[^#]*$'
       name: movie-mi4-playlist
       type: response
       require-body: true
-    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1467262841_A6793326577_es-419_subtitles_V\d+-\.webvtt\?(?=[^#]*mi4zhadd=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1467262841_A6793326577_es-419_subtitles_V\d+-\.webvtt\?[^#]*mi4zhadd=1[^#]*$'
       name: movie-mi4-vtt
       type: response
       require-body: true
+      timeout: 30
+      max-size: 2097152
     - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/playlist\.m3u8\?(?:.*&)?a=6793332306(?:&.*)?$'
       name: movie-titanic-manifest
       type: response
       require-body: true
-    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?(?=[^#]*mainAssetAdamId=6793332306)(?=[^#]*titaniczh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?[^#]*mainAssetAdamId=6793332306[^#]*titaniczh=1[^#]*$'
       name: movie-titanic-playlist
       type: response
       require-body: true
-    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089\.webvtt\?(?=[^#]*titaniczh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089\.webvtt\?[^#]*titaniczh=1[^#]*$'
       name: movie-titanic-vtt
       type: response
       require-body: true
+      timeout: 30
+      max-size: 2097152
     - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/playlist\.m3u8\?(?:.*&)?a=6792938265(?:&.*)?$'
       name: movie-gone-girl-manifest
       type: response
       require-body: true
-    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?(?=[^#]*mainAssetAdamId=6792938265)(?=[^#]*gonegirlzh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/play-edge\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/stream\/playlist\.m3u8\?[^#]*mainAssetAdamId=6792938265[^#]*gonegirlzh=1[^#]*$'
       name: movie-gone-girl-playlist
       type: response
       require-body: true
-    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1467262512_A6792938265_en_subtitles_V\d+-\.webvtt\?(?=[^#]*gonegirlzh=1)[^#]*$'
+      timeout: 30
+      max-size: 2097152
+    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1467262512_A6792938265_en_subtitles_V\d+-\.webvtt\?[^#]*gonegirlzh=1[^#]*$'
       name: movie-gone-girl-vtt
       type: response
       require-body: true
+      timeout: 30
+      max-size: 2097152
     - match: '^https:\/\/vod-(?:ap|fa|ak)-amt\.tv\.apple\.com\/itunes-assets\/(?:[^\/]+\/)+P1220541004_A960891136_fr-FR_subtitles_V2-\d+\.webvtt(?:\?.*)?$'
       name: movie-interstellar-vtt
       type: response
       require-body: true
+      timeout: 30
+      max-size: 2097152
 
 script-providers:
   f1-subtitle-manifest:
