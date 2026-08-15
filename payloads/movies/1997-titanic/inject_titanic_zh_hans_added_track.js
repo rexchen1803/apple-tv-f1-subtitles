@@ -1,0 +1,57 @@
+const assetId = "6793332306";
+const stableRenditionId = "titanic-zh-hans-added-v1";
+const marker = "titaniczh=1";
+
+function quotedAttribute(line, name) {
+  return line.match(new RegExp(`${name}="([^"]+)"`))?.[1] || null;
+}
+
+function setAttribute(line, name, value, quoted = false) {
+  const pattern = new RegExp(`${name}=(?:"[^"]*"|[^,]*)`);
+  const rendered = `${name}=${quoted ? `"${value}"` : value}`;
+  return pattern.test(line) ? line.replace(pattern, rendered) : `${line},${rendered}`;
+}
+
+function inject(body) {
+  if (
+    typeof body !== "string" ||
+    !body.includes("#EXT-X-STREAM-INF:") ||
+    !body.includes(`DATA-ID="com.apple.hls.feature.adam-id",VALUE="${assetId}"`)
+  ) return null;
+  if (body.includes(`STABLE-RENDITION-ID="${stableRenditionId}"`)) return body;
+
+  const lines = body.replace(/\r/g, "").split("\n");
+  const source = lines.filter((line) =>
+    line.startsWith("#EXT-X-MEDIA:") &&
+    line.includes("TYPE=SUBTITLES") &&
+    quotedAttribute(line, "LANGUAGE") === "de" &&
+    quotedAttribute(line, "NAME") === "Deutsch (forced)" &&
+    line.includes("FORCED=YES")
+  );
+  if (source.length !== 3) return null;
+
+  const added = source.map((line) => {
+    let output = setAttribute(line, "LANGUAGE", "zh-Hans", true);
+    output = setAttribute(output, "NAME", "简体中文", true);
+    output = setAttribute(output, "DEFAULT", "NO");
+    output = setAttribute(output, "AUTOSELECT", "YES");
+    output = setAttribute(output, "FORCED", "NO");
+    output = setAttribute(output, "STABLE-RENDITION-ID", stableRenditionId, true);
+    const uri = quotedAttribute(output, "URI");
+    return uri && !uri.includes(marker)
+      ? setAttribute(output, "URI", `${uri}${uri.includes("?") ? "&" : "?"}${marker}`, true)
+      : output;
+  });
+
+  const insertion = lines.findIndex((line) => line.startsWith("#EXT-X-STREAM-INF:"));
+  if (insertion < 0) return null;
+  lines.splice(insertion, 0, ...added);
+  return lines.join("\n");
+}
+
+try {
+  const body = inject($response.body);
+  $done(body ? { body } : {});
+} catch (_) {
+  $done({});
+}
