@@ -1,14 +1,17 @@
-# Apple TV F1 Subtitles（Public Beta）
+# Apple Video Subtitles
 
-为 Apple TV F1 比赛回放提供中文比赛解说字幕。
+为 Apple TV F1 比赛回放和影视内容提供中文字幕。
 
-当前版本：`2026.07.31.1`
+目前收录：
 
-目前已支持 2026 澳大利亚、中国、日本、迈阿密、加拿大、摩纳哥、西班牙、奥地利、英国和比利时站，共 10 场正赛回放。
+- F1 2026 赛季澳大利亚至比利时站，共 10 场正赛回放的中文解说字幕。
+- Apple TV 中《火星救援》《碟中谍4》《泰坦尼克号》《消失的爱人》的简体中文字幕。
 
-字幕覆盖正式比赛介绍、正赛、赛道采访、冷却室、颁奖、分类和积分榜；不含赛前节目及正式结束语后的赛后节目。
+F1 字幕覆盖正赛完整解说内容，不含赛前节目及正式结束语后的赛后节目，并将原始英文字幕替换为中文字幕。
 
-项目仍处于公测阶段，可能出现翻译、时间轴或显示问题；欢迎通过 Telegram：[@rexchen29](https://t.me/rexchen29) 或邮箱：[rexchen1129@gmail.com](mailto:rexchen1129@gmail.com) 反馈具体赛事、时间点和问题内容，帮助持续优化。
+Apple TV 影片以独立字幕轨的形式新增简体中文字幕。
+
+如遇翻译、时间轴或显示问题，欢迎通过 Telegram：[@rexchen1803](https://t.me/rexchen1803) 或邮箱：[rexchen1129@gmail.com](mailto:rexchen1129@gmail.com) 反馈具体内容和时间点。
 
 ---
 
@@ -18,16 +21,14 @@
 
 已安装旧版模块的用户，请先停用或删除旧模块，再使用下方新地址添加，避免重复改写同一请求。
 
-| 工具 | 添加位置 | 模块地址 |
+| 工具 | 添加位置 | 下载地址 |
 | --- | --- | --- |
-| Surge | 模块 | [https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule](https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule) |
-| Stash | 覆写 | [https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/stash/apple-tv-chinese-subtitles.stoverride](https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/stash/apple-tv-chinese-subtitles.stoverride) |
-| Shadowrocket | 模块 | [https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/shadowrocket/apple-tv-chinese-subtitles.module](https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/shadowrocket/apple-tv-chinese-subtitles.module) |
-
-打开支持场次的比赛回放，在字幕中选择英文解说对应的字幕轨即可。
+| Surge | 模块 | [下载 Surge 模块](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule) |
+| Stash | 覆写 | [下载 Stash 覆写](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-tv-chinese-subtitles.stoverride) |
+| Shadowrocket | 模块 | [下载 Shadowrocket 模块](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-tv-chinese-subtitles.module) |
 
 ---
 
 ## 支持与交流
 
-欢迎加入我的咨询会员，获取 Apple、AI Agent 和网络相关的交流与技术支持。你也可以前往 [爱发电](https://ifdian.net/a/rexchen) 赞助或加入会员。
+欢迎关注，获取 Apple、AI Agent 和网络相关的交流与技术支持。你也可以前往 [爱发电](https://ifdian.net/a/rexchen) 赞助或加入会员。
