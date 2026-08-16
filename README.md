@@ -26,9 +26,9 @@ Surge、Stash 和 Shadowrocket 三个版本均包含 F1 英文转简体中文、
 
 | 工具 | 添加位置 | 下载地址 |
 | --- | --- | --- |
-| Surge | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/surge/apple-video-subtitles.sgmodule> |
-| Stash | 覆写 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/stash/apple-video-subtitles.stoverride> |
-| Shadowrocket | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/shadowrocket/apple-video-subtitles.module> |
+| Surge | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/2e58873/surge/apple-video-subtitles.sgmodule> |
+| Stash | 覆写 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/2e58873/stash/apple-video-subtitles.stoverride> |
+| Shadowrocket | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/2e58873/shadowrocket/apple-video-subtitles.module> |
 
 ---
 
