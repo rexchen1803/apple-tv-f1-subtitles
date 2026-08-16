@@ -6,8 +6,6 @@ http:
     - hls-amt.itunes.apple.com
     - uts-api.itunes.apple.com
     - play-cdn.itunes.apple.com
-    - play.itunes.apple.com
-    - play-edge.itunes.apple.com
     - play-edge-cdn.itunes.apple.com
     - vod-ap-aoc.tv.apple.com
     - vod-fa-aoc.tv.apple.com

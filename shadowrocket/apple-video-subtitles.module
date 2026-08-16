@@ -26,4 +26,4 @@ AppleTV.Movie.Interstellar.zh-Hans.French.response = type=http-response,engine=w
 
 [MITM]
 h2 = true
-hostname = %APPEND% hls-amt.itunes.apple.com, uts-api.itunes.apple.com, play-cdn.itunes.apple.com, play.itunes.apple.com, play-edge.itunes.apple.com, play-edge-cdn.itunes.apple.com, vod-ap-aoc.tv.apple.com, vod-fa-aoc.tv.apple.com, vod-ak-aoc.tv.apple.com, vod-ap-amt.tv.apple.com, vod-fa-amt.tv.apple.com, vod-ak-amt.tv.apple.com
+hostname = %APPEND% hls-amt.itunes.apple.com, uts-api.itunes.apple.com, play-cdn.itunes.apple.com, play-edge-cdn.itunes.apple.com, vod-ap-aoc.tv.apple.com, vod-fa-aoc.tv.apple.com, vod-ak-aoc.tv.apple.com, vod-ap-amt.tv.apple.com, vod-fa-amt.tv.apple.com, vod-ak-amt.tv.apple.com
