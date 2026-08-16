@@ -16,6 +16,8 @@
 
 > 使用前，请先在 Surge、Stash 或 Shadowrocket 中开启 **MITM**，并安装、信任根证书。
 
+已安装旧版模块的用户，请先停用或删除旧模块，再使用下方新地址添加，避免重复改写同一请求。
+
 | 工具 | 添加位置 | 模块地址 |
 | --- | --- | --- |
 | Surge | 模块 | [https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule](https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule) |
