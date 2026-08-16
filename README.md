@@ -12,6 +12,8 @@ F1 字幕覆盖正赛完整解说内容，不含赛前节目及正式结束语�
 
 Apple TV 四部影片以独立字幕轨的形式新增简体中文字幕；《星际穿越》使用法语字幕轨替换为简体中文。
 
+Surge、Stash 和 Shadowrocket 三个版本均包含 F1 英文转简体中文、F1 西班牙语转车迷版中文、四部影片新增中文字幕，以及《星际穿越》法语字幕轨替换为简体中文。
+
 如遇翻译、时间轴或显示问题，欢迎通过 Telegram：[@rexchen1803](https://t.me/rexchen1803) 或邮箱：[rexchen1129@gmail.com](mailto:rexchen1129@gmail.com) 反馈具体内容和时间点。
 
 ---
@@ -24,9 +26,9 @@ Apple TV 四部影片以独立字幕轨的形式新增简体中文字幕；《�
 
 | 工具 | 添加位置 | 下载地址 |
 | --- | --- | --- |
-| Surge | 模块 | [下载 Surge 模块](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule) |
-| Stash | 覆写 | [下载 Stash 覆写](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-tv-chinese-subtitles.stoverride) |
-| Shadowrocket | 模块 | [下载 Shadowrocket 模块](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-tv-chinese-subtitles.module) |
+| Surge | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-tv-chinese-subtitles.sgmodule> |
+| Stash | 覆写 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-tv-chinese-subtitles.stoverride> |
+| Shadowrocket | 模块 | <https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-tv-chinese-subtitles.module> |
 
 ---
 
