@@ -1,9 +1,12 @@
-name: Apple TV 中文字幕
-desc: 2026 F1 前 10 站正赛回放及《火星救援》《碟中谍4》《泰坦尼克号》《消失的爱人》中文字幕；需开启 MITM 并信任证书。
+name: Apple TV 中文字幕（F1 + 影片）
+desc: 2026 F1 前 10 站正赛回放中文字幕；另含《火星救援》《碟中谍4》《泰坦尼克号》《消失的爱人》中文字幕，以及《星际穿越》法语字幕轨替换为简体中文；需开启 MITM 并信任证书。
 
 http:
   mitm:
     - hls-amt.itunes.apple.com
+    - uts-api.itunes.apple.com
+    - play-cdn.itunes.apple.com
+    - play.itunes.apple.com
     - play-edge.itunes.apple.com
     - play-edge-cdn.itunes.apple.com
     - vod-ap-aoc.tv.apple.com
@@ -12,7 +15,16 @@ http:
     - vod-ap-amt.tv.apple.com
     - vod-fa-amt.tv.apple.com
     - vod-ak-amt.tv.apple.com
+  url-rewrite:
+    - ^https?:\/\/play-cdn\.itunes\.apple\.com https://play.itunes.apple.com transparent
+    - ^https?:\/\/play-edge-cdn\.itunes\.apple\.com https://play-edge.itunes.apple.com transparent
   script:
+    - match: '^https?:\/\/uts-api\.itunes\.apple\.com\/uts\/(?:v1|v2|v3)\/'
+      name: apple-tv-playback-host-workaround
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 2097152
     - match: '^https?:\/\/hls-amt\.itunes\.apple\.com\/itunes-assets\/HLSSportsVodVideo\d+\/v4\/.+\/.+_subtitles_V\d+\.m3u8'
       name: f1-subtitle-manifest
       type: response
@@ -105,51 +117,54 @@ http:
       max-size: 2097152
 
 script-providers:
+  apple-tv-playback-host-workaround:
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/apple-tv/restore_apple_tv_playback_hosts.js
+    interval: 86400
   f1-subtitle-manifest:
-    url: https://github.com/DualSubs/Universal/releases/download/v1.7.5/Manifest.response.bundle.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/DualSubs-Universal-v1.7.5.Manifest.response.bundle.js
     interval: 86400
   f1-race-commentary-zh:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/2026-f1-race-commentary-zh.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/2026-f1-race-commentary-zh.js
     interval: 86400
   f1-race-commentary-fan-zh:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/2026-f1-race-commentary-fan-zh.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/2026-f1-race-commentary-fan-zh.js
     interval: 86400
   movie-the-martian-manifest:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2015-the-martian/inject_the_martian_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2015-the-martian/inject_the_martian_zh_hans_added_track.js
     interval: 86400
   movie-the-martian-playlist:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2015-the-martian/rewrite_the_martian_added_track_playlist.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2015-the-martian/rewrite_the_martian_added_track_playlist.js
     interval: 86400
   movie-the-martian-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2015-the-martian/serve_the_martian_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2015-the-martian/serve_the_martian_zh_hans_added_track.js
     interval: 86400
   movie-mi4-manifest:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/inject_mi4_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/inject_mi4_zh_hans_added_track.js
     interval: 86400
   movie-mi4-playlist:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/rewrite_mi4_added_track_playlist.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/rewrite_mi4_added_track_playlist.js
     interval: 86400
   movie-mi4-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/serve_mi4_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2011-mission-impossible-ghost-protocol/serve_mi4_zh_hans_added_track.js
     interval: 86400
   movie-titanic-manifest:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/1997-titanic/inject_titanic_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/1997-titanic/inject_titanic_zh_hans_added_track.js
     interval: 86400
   movie-titanic-playlist:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/1997-titanic/rewrite_titanic_added_track_playlist.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/1997-titanic/rewrite_titanic_added_track_playlist.js
     interval: 86400
   movie-titanic-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/1997-titanic/serve_titanic_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/1997-titanic/serve_titanic_zh_hans_added_track.js
     interval: 86400
   movie-gone-girl-manifest:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2014-gone-girl/inject_gone_girl_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2014-gone-girl/inject_gone_girl_zh_hans_added_track.js
     interval: 86400
   movie-gone-girl-playlist:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2014-gone-girl/rewrite_gone_girl_added_track_playlist.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2014-gone-girl/rewrite_gone_girl_added_track_playlist.js
     interval: 86400
   movie-gone-girl-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2014-gone-girl/serve_gone_girl_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2014-gone-girl/serve_gone_girl_zh_hans_added_track.js
     interval: 86400
   movie-interstellar-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-tv-f1-subtitles/main/payloads/movies/2014-interstellar/serve_interstellar_fr_as_zh_hans.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/payloads/movies/2014-interstellar/serve_interstellar_fr_as_zh_hans.js
     interval: 86400
