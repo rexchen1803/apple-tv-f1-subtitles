@@ -37,8 +37,9 @@ function injectTrack(body) {
     if (!uri) throw new Error("English subtitle row has no URI");
     let output = setAttribute(line, "LANGUAGE", "zh-Hans", true);
     output = setAttribute(output, "NAME", "简体中文", true);
-    output = setAttribute(output, "DEFAULT", "NO");
+    output = setAttribute(output, "DEFAULT", "YES");
     output = setAttribute(output, "AUTOSELECT", "YES");
+    output = setAttribute(output, "ASSOC-LANGUAGE", "zh", true);
     output = setAttribute(output, "STABLE-RENDITION-ID", stableRenditionId, true);
     output = setAttribute(output, "URI", `${uri}&martianzh=1`, true);
     return output;
