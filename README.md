@@ -22,9 +22,9 @@
 
 | 工具 | 添加位置 | 下载地址 |
 | --- | --- | --- |
-| Surge | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/v260822A/surge/apple-video-subtitles.sgmodule) |
-| Stash | 覆写 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/v260822A/stash/apple-video-subtitles.stoverride) |
-| Shadowrocket | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/v260822A/shadowrocket/apple-video-subtitles.module) |
+| Surge | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-video-subtitles.sgmodule) |
+| Stash | 覆写 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-video-subtitles.stoverride) |
+| Shadowrocket | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-video-subtitles.module) |
 
 ---
 
