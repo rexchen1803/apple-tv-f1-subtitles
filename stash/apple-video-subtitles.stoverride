@@ -71,7 +71,7 @@ http:
       require-body: true
       timeout: 30
       max-size: 2097152
-    - match: '^https:\/\/play-edge(?:-cdn)?\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/playlist\.m3u8\?(?:.*&)?a=6793332306(?:&.*)?$'
+    - match: '^https:\/\/play-edge(?:-cdn)?\.itunes\.apple\.com\/WebObjects\/MZPlayLocal\.woa\/hls\/subscription\/playlist\.m3u8\?(?=[^#]*(?:a=6793332306|mainAssetAdamId=6793332306))[^#]*$'
       name: movie-titanic-manifest
       type: response
       require-body: true
@@ -83,7 +83,7 @@ http:
       require-body: true
       timeout: 30
       max-size: 2097152
-    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089\.webvtt\?[^#]*titaniczh=1[^#]*$'
+    - match: '^https:\/\/vod-(?:ap|fa|ak)-aoc\.tv\.apple\.com\/itunes-assets\/(?:HLSAppleVideo211\/v4\/(?:[^\/]+\/)+P1474878312_A6793332306_es-419_subtitles_V2-|HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089)\.webvtt\?[^#]*titaniczh=1[^#]*$'
       name: movie-titanic-vtt
       type: response
       require-body: true
@@ -399,13 +399,13 @@ script-providers:
     url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/payloads/movies/2011-mission-impossible-ghost-protocol/serve_mi4_zh_hans_added_track.js
     interval: 86400
   movie-titanic-manifest:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/payloads/movies/1997-titanic/inject_titanic_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/e0a8757/payloads/movies/1997-titanic/inject_titanic_zh_hans_added_track.js
     interval: 86400
   movie-titanic-playlist:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/payloads/movies/1997-titanic/rewrite_titanic_added_track_playlist.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/e0a8757/payloads/movies/1997-titanic/rewrite_titanic_added_track_playlist.js
     interval: 86400
   movie-titanic-vtt:
-    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/payloads/movies/1997-titanic/serve_titanic_zh_hans_added_track.js
+    url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/e0a8757/payloads/movies/1997-titanic/serve_titanic_zh_hans_added_track.js
     interval: 86400
   movie-gone-girl-manifest:
     url: https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/8118f3f/payloads/movies/2014-gone-girl/inject_gone_girl_zh_hans_added_track.js

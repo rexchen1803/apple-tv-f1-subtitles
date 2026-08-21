@@ -2,6 +2,9 @@ const body = "WEBVTT\nX-TIMESTAMP-MAP=MPEGTS:900000,LOCAL:00:00:00.000\n\n990180
 try {
   const url = $request.url || "";
   const marked = url.includes("titaniczh=1");
-  const target = /\/itunes-assets\/HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089\.webvtt(?:\?.*)?$/.test(url);
+  const target = [
+    /\/itunes-assets\/HLSAppleVideo211\/v4\/(?:[^\/]+\/)+P1474878312_A6793332306_es-419_subtitles_V2-\.webvtt(?:\?.*)?$/,
+    /\/itunes-assets\/HLSAppleVideo221\/v4\/59\/aa\/9d\/59aa9ddd-f65a-085f-7a2c-c4b927941f8b\/empty-11688089\.webvtt(?:\?.*)?$/,
+  ].some((pattern) => pattern.test(url));
   $done(marked && target ? { body } : {});
 } catch (_) { $done({}); }
