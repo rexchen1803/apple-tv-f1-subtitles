@@ -21,16 +21,23 @@ function inject(body) {
   if (body.includes(`STABLE-RENDITION-ID="${stableRenditionId}"`)) return body;
 
   const lines = body.replace(/\r/g, "").split("\n");
-  const source = lines.filter((line) =>
+  const spanish = lines.filter((line) =>
+    line.startsWith("#EXT-X-MEDIA:") &&
+    line.includes("TYPE=SUBTITLES") &&
+    quotedAttribute(line, "LANGUAGE") === "es-419" &&
+    line.includes("FORCED=NO")
+  );
+  const germanForced = lines.filter((line) =>
     line.startsWith("#EXT-X-MEDIA:") &&
     line.includes("TYPE=SUBTITLES") &&
     quotedAttribute(line, "LANGUAGE") === "de" &&
     quotedAttribute(line, "NAME") === "Deutsch (forced)" &&
     line.includes("FORCED=YES")
   );
-  if (source.length !== 3) return null;
+  const source = spanish.length ? spanish : germanForced;
+  if (source.length < 1 || source.length > 3) return null;
 
-  const added = source.map((line) => {
+  const replacement = source.map((line) => {
     let output = setAttribute(line, "LANGUAGE", "zh-Hans", true);
     output = setAttribute(output, "NAME", "简体中文", true);
     output = setAttribute(output, "DEFAULT", "YES");
@@ -44,9 +51,8 @@ function inject(body) {
       : output;
   });
 
-  const insertion = lines.findIndex((line) => line.startsWith("#EXT-X-STREAM-INF:"));
-  if (insertion < 0) return null;
-  lines.splice(insertion, 0, ...added);
+  const insertionIndex = lines.indexOf(source.at(-1)) + 1;
+  lines.splice(insertionIndex, 0, ...replacement);
   return lines.join("\n");
 }
 
