@@ -20,11 +20,25 @@
 
 在对应的代理工具中下载相应模块；已安装旧版模块无法正常更新的用户，可先删除旧模块，再添加下方地址，避免重复改写同一请求。
 
-| 工具 | 添加位置 | 下载地址 |
-| --- | --- | --- |
-| Surge | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-video-subtitles.sgmodule) |
-| Stash | 覆写 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-video-subtitles.stoverride) |
-| Shadowrocket | 模块 | [点击下载](https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-video-subtitles.module) |
+以下地址用于添加模块，请点击每个代码框右上角的复制按钮。
+
+### Surge（模块）
+
+```text
+https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/surge/apple-video-subtitles.sgmodule
+```
+
+### Stash（覆写）
+
+```text
+https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/stash/apple-video-subtitles.stoverride
+```
+
+### Shadowrocket（模块）
+
+```text
+https://raw.githubusercontent.com/rexchen1803/apple-video-subtitles/main/shadowrocket/apple-video-subtitles.module
+```
 
 ---
 
